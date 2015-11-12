@@ -26,7 +26,6 @@ module LetterAvatar
         end
       end
 
-
       def cache_path
         "#{LetterAvatar.cache_base_path || 'public/system'}/letter_avatars/#{VERSION}"
       end
@@ -70,7 +69,7 @@ module LetterAvatar
           -size 240x240
           xc:#{to_rgb(color)}
           -pointsize 140
-          -font Roboto-Medium
+          -font #{LetterAvatar.font}
           -weight 500
           -fill '#{FILL_COLOR}'
           -gravity Center
